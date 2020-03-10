@@ -4,11 +4,18 @@ Package chromedp is a faster, simpler way to drive browsers supporting the
 [Chrome DevTools Protocol][3] in Go without external dependencies (like
 Selenium or PhantomJS).
 
+## Difference from chromedp
+
+In order to get the chrome's process ID:
+	
+	added func:  chromedp.RunWithPID(ctx context.Context, actions ...Action)
+
+	
 ## Installing
 
 Install in the usual Go way:
 
-	go get -u github.com/chromedp/chromedp
+	go get -u github.com/mjgaga/chromedp
 
 ## Examples
 
