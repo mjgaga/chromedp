@@ -8,7 +8,7 @@ Selenium or PhantomJS).
 
 In order to get the chrome's process ID:
 	
-	added func:  chromedp.RunWithPID(ctx context.Context, actions ...Action)
+	added func:  browser.GetPid() (error, int)
 
 	
 ## Installing

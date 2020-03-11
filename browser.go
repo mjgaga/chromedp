@@ -300,6 +300,16 @@ func (b *Browser) run(ctx context.Context) {
 	}
 }
 
+// Create by mjgaga
+// browser.GetPid return the chrome process PID as second argument
+func (b *Browser) GetPid() (error, int) {
+	if b.process == nil {
+		return errors.New("no process bind to the browser"), 0
+	}
+
+	return nil, b.process.Pid
+}
+
 // BrowserOption is a browser option.
 type BrowserOption = func(*Browser)
 
